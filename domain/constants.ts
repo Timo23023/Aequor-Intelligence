@@ -1,35 +1,49 @@
-export enum SourceType {
-    Public = 'PUBLIC',
-    PrivateByod = 'PRIVATE_BYOD'
-}
+/**
+ * Domain Constants - Contract-Aligned Types
+ * Source of Truth: docs/CONTRACTS.md
+ * 
+ * These are string-literal unions, NOT enums, to match CONTRACTS.md exactly.
+ * No 'any' casts allowed. External data must map to these exact values.
+ */
 
-export enum EventType {
-    PortCall = 'PORT_CALL',
-    BunkerPrice = 'BUNKER_PRICE',
-    Geopolitical = 'GEOPOLITICAL',
-    Weather = 'WEATHER',
-    Regulatory = 'REGULATORY'
-}
+export type SourceType = "public" | "user_input" | "private_byod";
 
-export enum FuelType {
-    VLSFO = 'VLSFO',
-    LSMGO = 'LSMGO',
-    HSFO = 'HSFO',
-    LNG = 'LNG',
-    Methanol = 'METHANOL',
-    Ammonia = 'AMMONIA'
-}
+export type EventType =
+    | "supply"
+    | "demand"
+    | "regulation"
+    | "disruption"
+    | "project"
+    | "port_update"
+    | "price_proxy"
+    | "analysis"
+    | "other";
 
-export enum Region {
-    NorthEurope = 'NORTH_EUROPE',
-    Mediterranean = 'MEDITERRANEAN',
-    USGulf = 'US_GULF',
-    Singapore = 'SINGAPORE',
-    China = 'CHINA',
-    Global = 'GLOBAL'
-}
+export type FuelType =
+    | "methanol_green"
+    | "methanol_conventional"
+    | "vlsfo"
+    | "ulsfo"
+    | "mgo"
+    | "lng"
+    | "ammonia"
+    | "hydrogen"
+    | "other";
 
-export enum Visibility {
-    Public = 'PUBLIC',
-    Private = 'PRIVATE'
-}
+export type Region =
+    | "north_europe"
+    | "mediterranean"
+    | "middle_east"
+    | "asia"
+    | "north_america"
+    | "south_america"
+    | "africa"
+    | "oceania"
+    | "global"
+    | "other";
+
+export type Visibility = "public" | "private";
+
+export type Confidence = "low" | "medium" | "high";
+
+export type DisplayPolicy = "public" | "private";

@@ -1,7 +1,7 @@
-
 import React, { useState, useEffect } from 'react';
 import { EventFilters, Port } from '../../domain/types';
-import { EventType, FuelType, Region } from '../../domain/constants';
+import type { EventType, FuelType, Region } from '../../domain/constants';
+import { ALLOWED_EVENT_TYPES, ALLOWED_FUEL_TYPES, ALLOWED_REGIONS, EVENT_TYPE_LABELS, FUEL_TYPE_LABELS, REGION_LABELS } from '../../domain/contractSnapshot';
 import { portService } from '../../app/compose';
 
 interface FeedFiltersProps {
@@ -10,8 +10,8 @@ interface FeedFiltersProps {
 
 export const FeedFilters: React.FC<FeedFiltersProps> = ({ onFiltersChange }) => {
     const [search, setSearch] = useState('');
-    const [selectedFuels, setSelectedFuels] = useState<string[]>([]);
-    const [selectedRegions, setSelectedRegions] = useState<string[]>([]);
+    const [selectedFuels, setSelectedFuels] = useState<FuelType[]>([]);
+    const [selectedRegions, setSelectedRegions] = useState<Region[]>([]);
     const [selectedEventTypes, setSelectedEventTypes] = useState<EventType[]>([]);
     const [selectedPriorities, setSelectedPriorities] = useState<string[]>([]);
     const [sortMode, setSortMode] = useState<'newest' | 'priority'>('newest');
@@ -149,16 +149,16 @@ export const FeedFilters: React.FC<FeedFiltersProps> = ({ onFiltersChange }) => 
                     {portSuggestions.length > 0 && (
                         <div style={{
                             position: 'absolute', top: '100%', left: 0, right: 0,
-                            backgroundColor: 'var(--bg-card)', border: '1px solid var(--border-color)',
-                            zIndex: 10, maxHeight: '200px', overflowY: 'auto', boxShadow: '0 4px 6px rgba(0,0,0,0.3)'
+                            backgroundColor: 'white', border: '1px solid #ccc',
+                            zIndex: 10, maxHeight: '200px', overflowY: 'auto', boxShadow: '0 4px 6px rgba(0,0,0,0.1)'
                         }}>
                             {portSuggestions.map(p => (
                                 <div
                                     key={p.id}
                                     onClick={() => addPort(p)}
-                                    style={{ padding: '8px', cursor: 'pointer', fontSize: '13px', borderBottom: '1px solid var(--border-color)' }}
+                                    style={{ padding: '8px', cursor: 'pointer', fontSize: '13px', borderBottom: '1px solid #eee' }}
                                 >
-                                    <strong>{p.name}</strong> <span style={{ color: 'var(--text-secondary)' }}>({p.code})</span>
+                                    <strong>{p.name}</strong> <span style={{ color: '#666' }}>({p.code})</span>
                                 </div>
                             ))}
                         </div>
@@ -170,7 +170,7 @@ export const FeedFilters: React.FC<FeedFiltersProps> = ({ onFiltersChange }) => 
                                 {p.name}
                                 <button
                                     onClick={() => removePort(p.id)}
-                                    style={{ background: 'none', border: 'none', padding: 0, color: 'var(--text-secondary)', cursor: 'pointer', fontSize: '14px', lineHeight: 0 }}
+                                    style={{ background: 'none', border: 'none', padding: 0, color: 'inherit', cursor: 'pointer', fontSize: '14px', lineHeight: 0 }}
                                 >
                                     &times;
                                 </button>
@@ -185,7 +185,7 @@ export const FeedFilters: React.FC<FeedFiltersProps> = ({ onFiltersChange }) => 
                 <div>
                     <label style={{ display: 'block', marginBottom: '8px', fontSize: '12px', fontWeight: 600 }}>Event Types</label>
                     <div style={{ display: 'flex', flexDirection: 'column', gap: '4px', maxHeight: '150px', overflowY: 'auto' }}>
-                        {Object.values(EventType).map(type => (
+                        {ALLOWED_EVENT_TYPES.map(type => (
                             <label key={type} style={{ display: 'flex', alignItems: 'center', fontSize: '12px' }}>
                                 <input
                                     type="checkbox"
@@ -193,7 +193,7 @@ export const FeedFilters: React.FC<FeedFiltersProps> = ({ onFiltersChange }) => 
                                     onChange={() => toggleSelection(selectedEventTypes, setSelectedEventTypes, type)}
                                     style={{ width: 'auto', marginRight: '8px' }}
                                 />
-                                {type}
+                                {EVENT_TYPE_LABELS[type]}
                             </label>
                         ))}
                     </div>
@@ -203,7 +203,7 @@ export const FeedFilters: React.FC<FeedFiltersProps> = ({ onFiltersChange }) => 
                 <div>
                     <label style={{ display: 'block', marginBottom: '8px', fontSize: '12px', fontWeight: 600 }}>Regions</label>
                     <div style={{ display: 'flex', flexDirection: 'column', gap: '4px', maxHeight: '150px', overflowY: 'auto' }}>
-                        {Object.values(Region).map(region => (
+                        {ALLOWED_REGIONS.map(region => (
                             <label key={region} style={{ display: 'flex', alignItems: 'center', fontSize: '12px' }}>
                                 <input
                                     type="checkbox"
@@ -211,7 +211,7 @@ export const FeedFilters: React.FC<FeedFiltersProps> = ({ onFiltersChange }) => 
                                     onChange={() => toggleSelection(selectedRegions, setSelectedRegions, region)}
                                     style={{ width: 'auto', marginRight: '8px' }}
                                 />
-                                {region}
+                                {REGION_LABELS[region]}
                             </label>
                         ))}
                     </div>
@@ -221,7 +221,7 @@ export const FeedFilters: React.FC<FeedFiltersProps> = ({ onFiltersChange }) => 
                 <div>
                     <label style={{ display: 'block', marginBottom: '8px', fontSize: '12px', fontWeight: 600 }}>Fuels</label>
                     <div style={{ display: 'flex', flexDirection: 'column', gap: '4px', maxHeight: '150px', overflowY: 'auto' }}>
-                        {Object.values(FuelType).map(fuel => (
+                        {ALLOWED_FUEL_TYPES.map(fuel => (
                             <label key={fuel} style={{ display: 'flex', alignItems: 'center', fontSize: '12px' }}>
                                 <input
                                     type="checkbox"
@@ -229,7 +229,7 @@ export const FeedFilters: React.FC<FeedFiltersProps> = ({ onFiltersChange }) => 
                                     onChange={() => toggleSelection(selectedFuels, setSelectedFuels, fuel)}
                                     style={{ width: 'auto', marginRight: '8px' }}
                                 />
-                                {fuel}
+                                {FUEL_TYPE_LABELS[fuel]}
                             </label>
                         ))}
                     </div>

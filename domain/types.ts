@@ -1,4 +1,5 @@
-import { SourceType, EventType, Visibility } from './constants';
+import { SourceType, EventType, Visibility, Confidence } from './constants';
+export * from './constants';
 
 export interface SourceRef {
     id: string;

@@ -1,7 +1,6 @@
 import { IMarketDataAdapter } from '../adapters/adapter';
 import { EventFilters, FeedEvent } from '../domain/types';
-import { Visibility } from '../domain/constants';
-import { Visibility as VisibilityEnum } from '../domain/constants';
+import type { Visibility } from '../domain/constants';
 import { filterByTimeWindow, filterByFuel, filterByRegion, filterByPort, filterByEventType, filterByPriorityTag } from './filtering';
 import { searchEvents } from './search';
 import { sortByEventTimeDesc, sortByPriorityThenTimeDesc } from './sorting';
@@ -58,7 +57,7 @@ export class FeedService {
         }
 
         // Visibility Check
-        if (visibility === VisibilityEnum.Public && event.source.type === 'PRIVATE_BYOD') {
+        if (visibility === 'public' && event.source.type === 'private_byod') {
             throw new Error('Access Denied: Private event cannot be accessed in public context');
         }
 

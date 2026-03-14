@@ -2,10 +2,11 @@
 import React, { useState } from 'react';
 import { voyageCalculatorService } from '../../app/compose';
 import { VoyageScenarioInput, VoyageScenarioOutput } from '../../domain/types';
-import { FuelType } from '../../domain/constants';
+import type { FuelType } from '../../domain/constants';
+import { ALLOWED_FUEL_TYPES, FUEL_TYPE_LABELS } from '../../domain/contractSnapshot';
 
 const VoyageCalculatorPage: React.FC = () => {
-    const [fuelType, setFuelType] = useState<string>(FuelType.VLSFO);
+    const [fuelType, setFuelType] = useState<string>('vlsfo');
     const [currency, setCurrency] = useState('USD');
     const [priceLow, setPriceLow] = useState<string>('');
     const [priceBase, setPriceBase] = useState<string>('');
@@ -61,7 +62,7 @@ const VoyageCalculatorPage: React.FC = () => {
     };
 
     const loadPreset = () => {
-        setFuelType(FuelType.Methanol);
+        setFuelType('methanol_conventional');
         setPriceLow('800'); setPriceBase('950'); setPriceHigh('1100');
         setMode('daily');
         setDailyFuel('45'); setDaysAtSea('12');
@@ -81,7 +82,7 @@ const VoyageCalculatorPage: React.FC = () => {
                     <div>
                         <label style={{ display: 'block', fontSize: '12px', fontWeight: 600, marginBottom: '4px' }}>Fuel Type</label>
                         <select value={fuelType} onChange={e => setFuelType(e.target.value)}>
-                            {Object.values(FuelType).map(f => <option key={f} value={f}>{f}</option>)}
+                            {ALLOWED_FUEL_TYPES.map(f => <option key={f} value={f}>{FUEL_TYPE_LABELS[f]}</option>)}
                         </select>
                     </div>
                     <div>

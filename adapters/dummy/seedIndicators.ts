@@ -1,10 +1,10 @@
 import { Indicator } from '../../domain/types';
-import { SourceType } from '../../domain/constants';
+import type { SourceType } from '../../domain/constants';
 
 const PUBLIC_SOURCE = {
     id: 'src_public_idx',
     name: 'Public Market Index',
-    type: SourceType.Public,
+    type: 'public' as SourceType,
     provider: 'OpenMarketData',
     license_notes: 'CC-BY-4.0',
     retrieved_at: '2023-10-26T10:00:00Z'

@@ -1,6 +1,6 @@
 
 import { AlertRule, AlertEvent, FeedEvent, EventFilters } from '../domain/types';
-import { Visibility } from '../domain/constants';
+import type { Visibility } from '../domain/constants';
 
 const RULES_KEY = 'alert_rules';
 const ALERTS_KEY = 'alert_events';
@@ -41,7 +41,7 @@ export class AlertService {
             filters,
             workspace_mode: mode,
             created_at: new Date().toISOString(),
-            last_evaluated_at: new Date().toISOString() // Initialize watermark to NOW so we don't retroactively alert
+            last_evaluated_at: new Date().toISOString()
         };
         this.rules.push(rule);
         this.save();
@@ -71,21 +71,7 @@ export class AlertService {
 
         this.rules.forEach(rule => {
             if (!rule.enabled) return;
-
-            // Visibility Check:
-            // Public Rules only run in Public Mode (or active in Private mode? Requirement says: match mode)
-            // Implementation: Simple exact match for now.
-            // Actually, usually Private workspaces inherit Public rules.
-            // But let's stick to "mode matches rule mode" for simplicity, or 
-            // "Private mode checks Private AND Public rules".
-            // Let's do Strict Mode Match for MVP correctness to avoid double alerts if switching modes.
             if (rule.workspace_mode !== currentMode) return;
-
-            // Filter events strictly NEWER than watermark
-            // (Assumes events are sorted or we check all? We check all new candidates)
-            // Ideally we rely on event.timestamp. 
-            // But if we backtrack, we might re-alert.
-            // Better: only check events where timestamp > last_evaluated_at
 
             const candidates = events.filter(e => {
                 if (!rule.last_evaluated_at) return true;
@@ -93,7 +79,6 @@ export class AlertService {
             });
 
             if (candidates.length > 0) {
-                // Determine matches
                 candidates.forEach(event => {
                     const matchReason = this.checkMatch(event, rule.filters);
                     if (matchReason) {
@@ -110,7 +95,6 @@ export class AlertService {
                     }
                 });
 
-                // Update watermark
                 rule.last_evaluated_at = now;
             }
         });
@@ -123,23 +107,15 @@ export class AlertService {
     }
 
     private checkMatch(event: FeedEvent, filters: EventFilters): string | null {
-        // Returns reason if matched, null otherwise
         const reasons: string[] = [];
 
         if (filters.fuels && filters.fuels.length > 0) {
-            // Need intersection. We don't have fuel info on event object directly in contract?
-            // Wait, looking at types.ts... FeedEvent has tags and eventType.
-            // It does NOT have specific 'fuel' field. Adaptation: check tags or metadata?
-            // Or assume tags contain fuel names.
-            const hasFuel = filters.fuels.some(f => event.tags.includes(f)); // Simple tag match
+            const hasFuel = filters.fuels.some(f => event.tags.includes(f));
             if (!hasFuel) return null;
             reasons.push(`Fuel matched`);
         }
 
         if (filters.regions && filters.regions.length > 0) {
-            // Event doesn't have region field directly?
-            // Usually region is implied by Port or tags.
-            // Let's assume tags for MVP if not explicit.
             const hasRegion = filters.regions.some(r => event.tags.includes(r));
             if (!hasRegion) return null;
             reasons.push(`Region matched`);
@@ -150,7 +126,6 @@ export class AlertService {
             reasons.push(`Type matched`);
         }
 
-        // Keyword Search (basic)
         if (filters.query) {
             const q = filters.query.toLowerCase();
             const txt = (event.title + ' ' + event.summary).toLowerCase();

@@ -1,17 +1,12 @@
 
 import { useState, useEffect } from 'react';
-import { Visibility } from '../../domain/constants';
+import type { Visibility } from '../../domain/constants';
 
 const STORAGE_KEY = 'workspace_mode';
 
 type Mode = 'public' | 'private';
 
-// Simple implementation using a custom event for cross-component sync if needed, 
-// or just a simple hook that initializes from persistent storage.
-// For this app, components that care about mode will just read it or listen to it.
-// To avoid global state complexity, we'll let AppShell drive the mode and pass it down via context?
-// No, constraints say "accessible via hook", "no global state libraries".
-// We can use a simple event bus pattern for the hook.
+// ... (existing helper code)
 
 const listeners = new Set<(mode: Mode) => void>();
 
@@ -34,7 +29,7 @@ export const useWorkspaceMode = () => {
 
     return {
         mode,
-        visibility: mode === 'public' ? Visibility.Public : Visibility.Private,
+        visibility: mode === 'public' ? 'public' as Visibility : 'private' as Visibility,
         toggleMode: () => setMode(mode === 'public' ? 'private' : 'public'),
         setPublic: () => setMode('public'),
         setPrivate: () => setMode('private')

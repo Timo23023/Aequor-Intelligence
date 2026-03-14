@@ -1,6 +1,6 @@
 
 import { AlertService } from '../services/AlertService';
-import { Visibility, Region, FuelType } from '../domain/constants';
+import type { Visibility, Region, FuelType, SourceType, EventType } from '../domain/constants';
 import { FeedEvent, AlertEvent } from '../domain/types';
 
 // Mock Events
@@ -9,9 +9,9 @@ const OLD_EVENT: FeedEvent = {
     title: 'Old Event',
     summary: '...',
     timestamp: new Date(Date.now() - 1000 * 60 * 60 * 24).toISOString(), // 24h ago
-    source: { id: 's1', name: 'S', type: 'PUBLIC' as any, provider: 'P' },
-    tags: [Region.NorthEurope, FuelType.Methanol],
-    eventType: 'REGULATORY' as any
+    source: { id: 's1', name: 'S', type: 'public' as SourceType, provider: 'P' },
+    tags: ['north_europe', 'methanol_conventional'],
+    eventType: 'regulation' as EventType
 };
 
 const NEW_EVENT: FeedEvent = {
@@ -19,18 +19,13 @@ const NEW_EVENT: FeedEvent = {
     title: 'New Methanol Event',
     summary: '...',
     timestamp: new Date().toISOString(), // NOW
-    source: { id: 's1', name: 'S', type: 'PUBLIC' as any, provider: 'P' },
-    tags: [Region.NorthEurope, FuelType.Methanol],
-    eventType: 'REGULATORY' as any
+    source: { id: 's1', name: 'S', type: 'public' as SourceType, provider: 'P' },
+    tags: ['north_europe', 'methanol_conventional'],
+    eventType: 'regulation' as EventType
 };
 
 const verifyAlerts = () => {
-    console.log("Starting Alert Verification...");
-
-    // Clear storage for test (mocking localStorage in Node requires polyfill or separate logic, 
-    // but since we run this via ts-node in a real env, we rely on AlertService gracefully handling missing localStorage or using in-memory fallback?
-    // AlertService calls `localStorage`. This will FAIL in Node unless polyfilled.
-    // We must polyfill it here.
+    // ... (storage setup same)
     const storage: Record<string, string> = {};
     global.localStorage = {
         getItem: (key: string) => storage[key] || null,
@@ -46,15 +41,12 @@ const verifyAlerts = () => {
     // 1. Create Rule
     console.log("Creating Rule: Methanol in North Europe (Public)");
     const rule = service.addRule('Test Rule', {
-        regions: [Region.NorthEurope],
-        fuels: [FuelType.Methanol]
-    }, Visibility.Public);
+        regions: ['north_europe'],
+        fuels: ['methanol_conventional']
+    }, 'public');
 
-    // 2. Evaluate with OLD event (should NOT trigger because watermark is initialized to NOW)
-    // Actually, rule.last_evaluated_at is NOW. OLD_EVENT.timestamp is OLDER.
-    // Logic: event.timestamp > rule.last_evaluated_at
-    // So Old Event should be ignored.
-    const alerts1 = service.evaluateAndPersist([OLD_EVENT], Visibility.Public);
+    // 2. Evaluate with OLD event
+    const alerts1 = service.evaluateAndPersist([OLD_EVENT], 'public');
     if (alerts1.length === 0) {
         console.log("  -> PASS: Old event ignored (Watermark worked)");
     } else {
@@ -62,10 +54,7 @@ const verifyAlerts = () => {
     }
 
     // 3. Evaluate with NEW event (should trigger)
-    // Wait 1ms to ensure timestamp > watermark? validation logic usually uses >
-    // Let's ensure NEW_EVENT is strictly newer than rule creation.
-    // It is created after rule.
-    const alerts2 = service.evaluateAndPersist([NEW_EVENT], Visibility.Public);
+    const alerts2 = service.evaluateAndPersist([NEW_EVENT], 'public');
     if (alerts2.length === 1 && alerts2[0].event_id === 'evt_new') {
         console.log("  -> PASS: New event triggered alert");
         console.log("     Reason:", alerts2[0].reason);

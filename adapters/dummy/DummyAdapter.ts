@@ -4,7 +4,7 @@ import { validateFeedEvent } from '../../domain/validators';
 import { SEED_EVENTS } from './seedEvents';
 import { SEED_PORTS } from './seedPorts';
 import { SEED_INDICATORS } from './seedIndicators';
-import { Visibility, SourceType } from '../../domain/constants';
+import type { Visibility, SourceType } from '../../domain/constants';
 
 export class DummyAdapter implements IMarketDataAdapter {
 
@@ -21,8 +21,8 @@ export class DummyAdapter implements IMarketDataAdapter {
         results.forEach(val => validateFeedEvent(val));
 
         // 1. Enforce Visibility
-        if (filters.visibility === Visibility.Public) {
-            results = results.filter(e => e.source.type !== SourceType.PrivateByod);
+        if (filters.visibility === 'public') {
+            results = results.filter(e => e.source.type !== 'private_byod');
         }
 
         // 2. Trivial Pagination (Limit) logic only

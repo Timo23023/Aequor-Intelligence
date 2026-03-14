@@ -34,8 +34,18 @@ export function filterByRegion(events: FeedEvent[], regions?: string[]): FeedEve
 export function filterByPort(events: FeedEvent[], ports?: string[]): FeedEvent[] {
     if (!ports || ports.length === 0) return events;
     return events.filter(e => {
-        const metaPort = e.metadata?.port;
-        return metaPort && ports.includes(metaPort);
+        // 1. Match LOCODE (most precise)
+        if (e.metadata?.portLocode && ports.includes(e.metadata.portLocode)) return true;
+
+        // 2. Match Port ID
+        if (e.metadata?.portId && ports.includes(e.metadata.portId)) return true;
+
+        // 3. Match Port Name (legacy/fallback)
+        if (e.metadata?.portName && ports.includes(e.metadata.portName)) return true;
+        if (e.metadata?.port && ports.includes(e.metadata.port)) return true;
+
+        // 4. Match Tags (fallback)
+        return e.tags.some(tag => ports.includes(tag));
     });
 }
 

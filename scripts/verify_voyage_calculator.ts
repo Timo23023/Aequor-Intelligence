@@ -1,7 +1,7 @@
 
 import { VoyageCalculatorService } from '../services/VoyageCalculatorService';
 import { VoyageScenarioInput } from '../domain/types';
-import { FuelType } from '../domain/constants';
+import type { FuelType } from '../domain/constants';
 
 const performVerification = () => {
     console.log("Starting Voyage Calculator Verification...");
@@ -10,7 +10,7 @@ const performVerification = () => {
 
     // 1. Direct consumption test
     const input1: VoyageScenarioInput = {
-        fuel_type: FuelType.VLSFO,
+        fuel_type: 'vlsfo' as FuelType,
         currency: 'USD',
         price_low: 500,
         price_base: 600,
@@ -34,7 +34,7 @@ const performVerification = () => {
 
     // 2. Computed consumption test
     const input2: VoyageScenarioInput = {
-        fuel_type: FuelType.LSMGO,
+        fuel_type: 'mgo' as FuelType,
         currency: 'EUR',
         price_low: 800,
         price_base: 850,

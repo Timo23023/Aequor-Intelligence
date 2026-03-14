@@ -1,5 +1,7 @@
 import { FeedEvent } from '../../domain/types';
-import { SourceType, EventType, FuelType, Region } from '../../domain/constants';
+import type { SourceType, EventType, FuelType, Region } from '../../domain/constants';
+import { ALLOWED_FUEL_TYPES, ALLOWED_REGIONS, ALLOWED_EVENT_TYPES } from '../../domain/contractSnapshot';
+import { SEED_PORTS } from './seedPorts';
 
 // Seeded PRNG for deterministic generation
 class SeededRandom {
@@ -18,7 +20,7 @@ class SeededRandom {
         return Math.floor(this.next() * (max - min + 1)) + min;
     }
 
-    pick<T>(arr: T[]): T {
+    pick<T>(arr: readonly T[]): T {
         return arr[this.nextInt(0, arr.length - 1)];
     }
 }
@@ -51,7 +53,7 @@ const summaryTemplates = [
 const PUBLIC_SOURCE = {
     id: 'src_public',
     name: 'Maritime Analytics',
-    type: SourceType.Public,
+    type: "public" as SourceType,
     provider: 'Industry Consortium',
     retrieved_at: new Date().toISOString()
 };
@@ -59,15 +61,12 @@ const PUBLIC_SOURCE = {
 const PRIVATE_SOURCE = {
     id: 'src_private_byod',
     name: 'Internal Intelligence',
-    type: SourceType.PrivateByod,
+    type: "private_byod" as SourceType,
     provider: 'Corporate',
     retrieved_at: new Date().toISOString()
 };
 
-const MAJOR_PORTS = [
-    'Rotterdam', 'Singapore', 'Shanghai', 'Houston', 'Fujairah',
-    'Antwerp', 'Gibraltar', 'Hamburg', 'Busan', 'New York', 'Los Angeles', 'Dubai'
-];
+const MAJOR_PORTS = SEED_PORTS.map(p => p.name);
 
 function generateTitle(rng: SeededRandom, fuel: string, region: string, port: string): string {
     const template = rng.pick(titleTemplates);
@@ -97,9 +96,10 @@ export function generateEvents(count: number = 300): FeedEvent[] {
     const events: FeedEvent[] = [];
     const now = Date.now();
 
-    const fuels = Object.values(FuelType);
-    const regions = Object.values(Region);
-    const eventTypes = Object.values(EventType);
+    // Use contract snapshot arrays
+    const fuels = [...ALLOWED_FUEL_TYPES];
+    const regions = [...ALLOWED_REGIONS];
+    const eventTypes = [...ALLOWED_EVENT_TYPES];
     const priorities = ['p1', 'p2', 'p3'];
 
     // Coverage tracking
@@ -146,6 +146,8 @@ export function generateEvents(count: number = 300): FeedEvent[] {
 
         const timestamp = new Date(now - rng.nextInt(0, 30 * 24 * 60 * 60 * 1000)).toISOString();
 
+        const portObj = SEED_PORTS.find(p => p.name === port);
+
         const event: FeedEvent = {
             id: `evt_${String(id++).padStart(4, '0')}`,
             title: generateTitle(rng, fuel, region, port),
@@ -154,7 +156,13 @@ export function generateEvents(count: number = 300): FeedEvent[] {
             source: PUBLIC_SOURCE,
             tags: [fuel, region, port, `priority:${priority}`],
             eventType: eventType,
-            metadata: { generated: true, priority }
+            metadata: {
+                generated: true,
+                priority,
+                portLocode: portObj?.code,
+                portId: portObj?.id,
+                portName: port
+            }
         };
 
         events.push(event);
@@ -175,6 +183,8 @@ export function generateEvents(count: number = 300): FeedEvent[] {
 
         const timestamp = new Date(now - rng.nextInt(0, 30 * 24 * 60 * 60 * 1000)).toISOString();
 
+        const portObj = SEED_PORTS.find(p => p.name === port);
+
         const event: FeedEvent = {
             id: `evt_${String(id++).padStart(4, '0')}`,
             title: generateTitle(rng, fuel, region, port),
@@ -182,7 +192,14 @@ export function generateEvents(count: number = 300): FeedEvent[] {
             timestamp,
             source: PUBLIC_SOURCE,
             tags: [fuel, region, port, `priority:${priority}`],
-            eventType: eventType
+            eventType: eventType,
+            metadata: {
+                generated: true,
+                priority,
+                portLocode: portObj?.code,
+                portId: portObj?.id,
+                portName: port
+            }
         };
 
         events.push(event);
@@ -202,7 +219,7 @@ export function generateEvents(count: number = 300): FeedEvent[] {
             timestamp: new Date(now - rng.nextInt(0, 7 * 24 * 60 * 60 * 1000)).toISOString(),
             source: PRIVATE_SOURCE,
             tags: [`priority:${priority}`, fuel, region, 'private'],
-            eventType: EventType.Regulatory
+            eventType: "regulation" as EventType
         };
 
         events.push(event);

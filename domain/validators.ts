@@ -1,12 +1,12 @@
 import { FeedEvent, SourceRef, EventFilters } from './types';
-import { SourceType, Visibility } from './constants';
+import { ALLOWED_SOURCE_TYPES } from './contractSnapshot';
 
 export function validateSourceRef(ref: SourceRef): void {
     if (!ref) throw new Error('SourceRef is null or undefined');
     if (!ref.id) throw new Error('SourceRef.id is missing');
     if (!ref.name) throw new Error('SourceRef.name is missing');
     if (!ref.type) throw new Error('SourceRef.type is missing');
-    if (!Object.values(SourceType).includes(ref.type)) {
+    if (!(ALLOWED_SOURCE_TYPES as readonly string[]).includes(ref.type)) {
         throw new Error(`Invalid SourceRef.type: ${ref.type}`);
     }
     if (!ref.provider) throw new Error('SourceRef.provider is missing');

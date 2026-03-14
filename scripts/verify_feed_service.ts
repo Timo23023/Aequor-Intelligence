@@ -1,5 +1,6 @@
+
 import { generateEvents } from '../adapters/dummy/generateEvents';
-import { FuelType, Region, EventType } from '../domain/constants';
+import { ALLOWED_FUEL_TYPES, ALLOWED_REGIONS, ALLOWED_EVENT_TYPES } from '../domain/contractSnapshot';
 
 console.log("Verifying Feed Service Data Coverage...\n");
 
@@ -15,22 +16,22 @@ const priorityCoverage = new Map<string, number>();
 const portCoverage = new Map<string, number>();
 
 // Initialize counters
-Object.values(FuelType).forEach(f => fuelCoverage.set(f, 0));
-Object.values(Region).forEach(r => regionCoverage.set(r, 0));
-Object.values(EventType).forEach(t => eventTypeCoverage.set(t, 0));
+ALLOWED_FUEL_TYPES.forEach(f => fuelCoverage.set(f, 0));
+ALLOWED_REGIONS.forEach(r => regionCoverage.set(r, 0));
+ALLOWED_EVENT_TYPES.forEach(t => eventTypeCoverage.set(t, 0));
 ['p1', 'p2', 'p3'].forEach(p => priorityCoverage.set(p, 0));
 
 // Count coverage
 events.forEach(event => {
     // Fuels
-    Object.values(FuelType).forEach(fuel => {
+    ALLOWED_FUEL_TYPES.forEach(fuel => {
         if (event.tags.includes(fuel)) {
             fuelCoverage.set(fuel, (fuelCoverage.get(fuel) || 0) + 1);
         }
     });
 
     // Regions
-    Object.values(Region).forEach(region => {
+    ALLOWED_REGIONS.forEach(region => {
         if (event.tags.includes(region)) {
             regionCoverage.set(region, (regionCoverage.get(region) || 0) + 1);
         }
@@ -52,8 +53,8 @@ events.forEach(event => {
 
     // Ports
     event.tags.forEach(tag => {
-        if (!tag.startsWith('priority:') && !Object.values(FuelType).includes(tag as any) &&
-            !Object.values(Region).includes(tag as any)) {
+        if (!tag.startsWith('priority:') && !(ALLOWED_FUEL_TYPES as readonly string[]).includes(tag) &&
+            !(ALLOWED_REGIONS as readonly string[]).includes(tag)) {
             portCoverage.set(tag, (portCoverage.get(tag) || 0) + 1);
         }
     });

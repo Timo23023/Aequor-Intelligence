@@ -1,0 +1,812 @@
+[
+  {
+    "id": "d8e916e66614f5f816e2426525f0bca2ef0fc9152c8523a721fef47dee3ce21d",
+    "timestamp": "2026-02-06T22:00:59.000Z",
+    "title": "Baltic Dry Index Down for 5th Day",
+    "summary": "The Baltic Exchange’s dry bulk index, which tracks rates for vessels transporting dry commodities, was down for a fifth consecutive day on Friday, falling by 0.7% to a fresh low since January 23 at 1,923 points. The capesize index, which typically transports 150,000-ton cargoe...",
+    "source": {
+      "id": "med_hellenic",
+      "name": "Hellenic Shipping News",
+      "type": "public",
+      "provider": "Hellenic Shipping News",
+      "retrievedAt": "2026-02-07T15:33:23.858Z"
+    },
+    "eventType": "port_update",
+    "fuel_types": [
+      "other"
+    ],
+    "metadata": {
+      "region": "mediterranean",
+      "url": "https://www.hellenicshippingnews.com/baltic-dry-index-down-for-5th-day/",
+      "rawSourceId": "med_hellenic",
+      "retrievedAt": "2026-02-07T15:33:23.858Z",
+      "confidence": "medium",
+      "fuel_types": [
+        "other"
+      ]
+    }
+  },
+  {
+    "id": "c85521cd5b1acbe176068362f8bd96d28c33a9a2f34b0ef02655f19585efb584",
+    "timestamp": "2026-02-06T22:00:59.000Z",
+    "title": "Ship Recycling Showing Mixed Performance",
+    "summary": "The ship recycling markets have shown mixed behaviour over the course of the past week. In its latest weekly report, Best Oasis (www.best-oasis.com), a leading cash buyer of ships said that “the Indian market remained positive this week, supported by the USD easing sharply fro...",
+    "source": {
+      "id": "med_hellenic",
+      "name": "Hellenic Shipping News",
+      "type": "public",
+      "provider": "Hellenic Shipping News",
+      "retrievedAt": "2026-02-07T15:33:23.858Z"
+    },
+    "eventType": "port_update",
+    "fuel_types": [
+      "other"
+    ],
+    "metadata": {
+      "region": "mediterranean",
+      "url": "https://www.hellenicshippingnews.com/ship-recycling-showing-mixed-performance/",
+      "rawSourceId": "med_hellenic",
+      "retrievedAt": "2026-02-07T15:33:23.858Z",
+      "confidence": "medium",
+      "fuel_types": [
+        "other"
+      ]
+    }
+  },
+  {
+    "id": "8efd8008e17f03170d239cf253d27a147a7c66a1a6b2997d51ba9f9201485594",
+    "timestamp": "2026-02-06T22:00:58.000Z",
+    "title": "Oil Prices Reverse Early Gains",
+    "summary": "WTI crude futures pared early gains to trade around the flatline near $67.5 a barrel on Friday and were on track for their first weekly decline in seven weeks, as concerns over potential supply disruptions in the Middle East eased. At the same time, investors remained cautious...",
+    "source": {
+      "id": "med_hellenic",
+      "name": "Hellenic Shipping News",
+      "type": "public",
+      "provider": "Hellenic Shipping News",
+      "retrievedAt": "2026-02-07T15:33:23.858Z"
+    },
+    "eventType": "price_proxy",
+    "fuel_types": [
+      "other"
+    ],
+    "metadata": {
+      "region": "mediterranean",
+      "url": "https://www.hellenicshippingnews.com/oil-prices-reverse-early-gains/",
+      "rawSourceId": "med_hellenic",
+      "retrievedAt": "2026-02-07T15:33:23.858Z",
+      "confidence": "medium",
+      "fuel_types": [
+        "other"
+      ]
+    }
+  },
+  {
+    "id": "fa6af75fd9f2c2e1c3cccab47cffb9f21173db30e5b1a8c5d3aeb7a843299818",
+    "timestamp": "2026-02-06T22:00:58.000Z",
+    "title": "Freight Markets at an Inflection Point: Geopolitics, Supply, and Demand Shifts",
+    "summary": "The average VLCC ballast speed in the AG area is now edging toward the upper range of 11.9, which aligns with the upward trend in TD3C rates. Amid rising Middle East tensions and geopolitical shifts, TD3C was indicating a soft downward trend into Friday’s close in the previous...",
+    "source": {
+      "id": "med_hellenic",
+      "name": "Hellenic Shipping News",
+      "type": "public",
+      "provider": "Hellenic Shipping News",
+      "retrievedAt": "2026-02-07T15:33:23.858Z"
+    },
+    "eventType": "demand",
+    "fuel_types": [
+      "other"
+    ],
+    "metadata": {
+      "region": "mediterranean",
+      "url": "https://www.hellenicshippingnews.com/freight-markets-at-an-inflection-point-geopolitics-supply-and-demand-shifts/",
+      "rawSourceId": "med_hellenic",
+      "retrievedAt": "2026-02-07T15:33:23.858Z",
+      "confidence": "medium",
+      "fuel_types": [
+        "other"
+      ]
+    }
+  },
+  {
+    "id": "480c79bc59012bdfa87024565a0f2fc3ed00a7f2caf462eeba518479c58b7565",
+    "timestamp": "2026-02-06T22:00:57.000Z",
+    "title": "Venezuela’s Oil Policy Shift and the Rising Maritime Risk Landscape",
+    "summary": "How Venezuela’s Oil Reform Is Changing Maritime Risk In late January 2026, Venezuela’s legislature approved sweeping reforms to the nation’s oil laws, effectively opening its statedominated energy sector to private and foreign investment in a dramatic policy shift after more t...",
+    "source": {
+      "id": "med_hellenic",
+      "name": "Hellenic Shipping News",
+      "type": "public",
+      "provider": "Hellenic Shipping News",
+      "retrievedAt": "2026-02-07T15:33:23.858Z"
+    },
+    "eventType": "regulation",
+    "fuel_types": [
+      "other"
+    ],
+    "metadata": {
+      "region": "mediterranean",
+      "url": "https://www.hellenicshippingnews.com/venezuelas-oil-policy-shift-and-the-rising-maritime-risk-landscape-2/",
+      "rawSourceId": "med_hellenic",
+      "retrievedAt": "2026-02-07T15:33:23.858Z",
+      "confidence": "medium",
+      "fuel_types": [
+        "other"
+      ]
+    }
+  },
+  {
+    "id": "71b24768a8dd60edce7a121da345929603e7504b33befd1c248e5b553e54226e",
+    "timestamp": "2026-02-06T22:00:57.000Z",
+    "title": "IMO DCS 2024: A reality check for shipping",
+    "summary": "The IMO Secretariat has submitted a summarised report on the data collected in 2024 through the IMO Data Collection System (DCS). This data will be reviewed by the MEPC during its next session in April 2026. Drewry’s Energy Transition team closely tracked this verified data to...",
+    "source": {
+      "id": "med_hellenic",
+      "name": "Hellenic Shipping News",
+      "type": "public",
+      "provider": "Hellenic Shipping News",
+      "retrievedAt": "2026-02-07T15:33:23.858Z"
+    },
+    "eventType": "regulation",
+    "fuel_types": [
+      "other"
+    ],
+    "metadata": {
+      "region": "mediterranean",
+      "url": "https://www.hellenicshippingnews.com/imo-dcs-2024-a-reality-check-for-shipping/",
+      "rawSourceId": "med_hellenic",
+      "retrievedAt": "2026-02-07T15:33:23.858Z",
+      "confidence": "medium",
+      "fuel_types": [
+        "other"
+      ]
+    }
+  },
+  {
+    "id": "214b324ea32cab436bffcdf047a252d24fd8c5b9daf4cf4d9de01404f7307528",
+    "timestamp": "2026-02-06T22:00:55.000Z",
+    "title": "ECB’s Escriva expects interest rates to remain steady",
+    "summary": "European Central Bank policymaker Jose Luis Escriva said he expects interest rates to remain steady in the foreseeable future, citing inflation expectations that are anchored around the institution’s 2% target. Escriva made these comments during an interview with Spanish radio...",
+    "source": {
+      "id": "med_hellenic",
+      "name": "Hellenic Shipping News",
+      "type": "public",
+      "provider": "Hellenic Shipping News",
+      "retrievedAt": "2026-02-07T15:33:23.858Z"
+    },
+    "eventType": "regulation",
+    "fuel_types": [
+      "other"
+    ],
+    "metadata": {
+      "region": "mediterranean",
+      "url": "https://www.hellenicshippingnews.com/ecbs-escriva-expects-interest-rates-to-remain-steady/",
+      "rawSourceId": "med_hellenic",
+      "retrievedAt": "2026-02-07T15:33:23.858Z",
+      "confidence": "medium",
+      "fuel_types": [
+        "other"
+      ]
+    }
+  },
+  {
+    "id": "8a92022beea3c7f215185221d815f7d204de73f95661a77e27f154213a255855",
+    "timestamp": "2026-02-06T22:00:55.000Z",
+    "title": "Xeneta Schedule Reliability Scorecard – 2025 Year in Review – Carriers",
+    "summary": "Welcome back to Xeneta Schedule Reliability – A Year in Review. We’ve drilled down all the way from global reliability to trades and alliances, arriving at last to carrier rankings.  Xeneta covers reliability for over 200 operators across more than 25,000 port pairs. Our repor...",
+    "source": {
+      "id": "med_hellenic",
+      "name": "Hellenic Shipping News",
+      "type": "public",
+      "provider": "Hellenic Shipping News",
+      "retrievedAt": "2026-02-07T15:33:23.858Z"
+    },
+    "eventType": "port_update",
+    "fuel_types": [
+      "other"
+    ],
+    "metadata": {
+      "region": "mediterranean",
+      "url": "https://www.hellenicshippingnews.com/xeneta-schedule-reliability-scorecard-2025-year-in-review-carriers/",
+      "rawSourceId": "med_hellenic",
+      "retrievedAt": "2026-02-07T15:33:23.858Z",
+      "confidence": "medium",
+      "fuel_types": [
+        "other"
+      ]
+    }
+  },
+  {
+    "id": "7e6c913216698ff14660c7b7a065385b28405a8c848e9c97fb2d41715ea7abbd",
+    "timestamp": "2026-02-06T22:00:53.000Z",
+    "title": "Gibson tanker report – Reassessing Russian Supply",
+    "summary": "Earlier this week, President Trump announced that the United States and India had agreed a trade deal.   Source: GIBSON SHIPBROKERS LTD",
+    "source": {
+      "id": "med_hellenic",
+      "name": "Hellenic Shipping News",
+      "type": "public",
+      "provider": "Hellenic Shipping News",
+      "retrievedAt": "2026-02-07T15:33:23.859Z"
+    },
+    "eventType": "port_update",
+    "fuel_types": [
+      "other"
+    ],
+    "metadata": {
+      "region": "mediterranean",
+      "url": "https://www.hellenicshippingnews.com/gibson-tanker-report-reassessing-russian-supply/",
+      "rawSourceId": "med_hellenic",
+      "retrievedAt": "2026-02-07T15:33:23.859Z",
+      "confidence": "medium",
+      "fuel_types": [
+        "other"
+      ]
+    }
+  },
+  {
+    "id": "ffc54f51ae0db7c477b442a9dbf76480ceff161636ee64fbdaa86017eaef5e85",
+    "timestamp": "2026-02-06T22:00:52.000Z",
+    "title": "Wheat Rises Toward 2-Month High",
+    "summary": "Wheat futures in the US were above $5.35 per bushel, not far from the two-month high of $5.4 on January 29th on lingering risks to supply. Renewed bouts of severe cold across the US Plains and parts of southern Russia revived concerns over winterkill for already stressed crops...",
+    "source": {
+      "id": "med_hellenic",
+      "name": "Hellenic Shipping News",
+      "type": "public",
+      "provider": "Hellenic Shipping News",
+      "retrievedAt": "2026-02-07T15:33:23.859Z"
+    },
+    "eventType": "other",
+    "fuel_types": [
+      "other"
+    ],
+    "metadata": {
+      "region": "mediterranean",
+      "url": "https://www.hellenicshippingnews.com/wheat-rises-toward-2-month-high/",
+      "rawSourceId": "med_hellenic",
+      "retrievedAt": "2026-02-07T15:33:23.859Z",
+      "confidence": "low",
+      "fuel_types": [
+        "other"
+      ]
+    }
+  },
+  {
+    "id": "af21278829f2acaf71cc13ad7ad49529e23fc12343e33995ba4e80f0074e4d8a",
+    "timestamp": "2026-02-06T22:00:51.000Z",
+    "title": "Drewry: World Container Index Down 7% Last Week",
+    "summary": "For many years, World Container Index (WCI) has been the go-to, independent, global reference for index-linked contracts. If your organisation is considering index-linked contracts or requires regional visibility/coverage beyond the eight trade lanes provided below, contact ou...",
+    "source": {
+      "id": "med_hellenic",
+      "name": "Hellenic Shipping News",
+      "type": "public",
+      "provider": "Hellenic Shipping News",
+      "retrievedAt": "2026-02-07T15:33:23.859Z"
+    },
+    "eventType": "other",
+    "fuel_types": [
+      "other"
+    ],
+    "metadata": {
+      "region": "mediterranean",
+      "url": "https://www.hellenicshippingnews.com/drewry-world-container-index-down-7-last-week-4/",
+      "rawSourceId": "med_hellenic",
+      "retrievedAt": "2026-02-07T15:33:23.859Z",
+      "confidence": "low",
+      "fuel_types": [
+        "other"
+      ]
+    }
+  },
+  {
+    "id": "582c856d31c4b8ad6b7917174a93169b7c6df25318d6bd9254e7bca9f56e06a6",
+    "timestamp": "2026-02-06T22:00:49.000Z",
+    "title": "China acting as ‘catalyst’ for innovation worldwide: report",
+    "summary": "Amid intensifying geopolitical tensions and growing investment protectionism worldwide, China has continued to widen its opening-up, enhance the liberalization and facilitation of investment, and further solidify its position as a major global investment player, according to a...",
+    "source": {
+      "id": "med_hellenic",
+      "name": "Hellenic Shipping News",
+      "type": "public",
+      "provider": "Hellenic Shipping News",
+      "retrievedAt": "2026-02-07T15:33:23.859Z"
+    },
+    "eventType": "project",
+    "fuel_types": [
+      "other"
+    ],
+    "metadata": {
+      "region": "mediterranean",
+      "url": "https://www.hellenicshippingnews.com/china-acting-as-catalyst-for-innovation-worldwide-report/",
+      "rawSourceId": "med_hellenic",
+      "retrievedAt": "2026-02-07T15:33:23.859Z",
+      "confidence": "medium",
+      "fuel_types": [
+        "other"
+      ]
+    }
+  },
+  {
+    "id": "48ca76b6abe8feea36f586b5af2201878543084736f888d469926f4be51aac4f",
+    "timestamp": "2026-02-06T22:00:49.000Z",
+    "title": "Best Oasis Weekly Recycling Market Report, 06 February 2026",
+    "summary": "The Indian market remained positive this week, supported by the USD easing sharply from recent highs following the US–India trade deal   Source: Best Oasis Limited",
+    "source": {
+      "id": "med_hellenic",
+      "name": "Hellenic Shipping News",
+      "type": "public",
+      "provider": "Hellenic Shipping News",
+      "retrievedAt": "2026-02-07T15:33:23.859Z"
+    },
+    "eventType": "port_update",
+    "fuel_types": [
+      "other"
+    ],
+    "metadata": {
+      "region": "mediterranean",
+      "url": "https://www.hellenicshippingnews.com/best-oasis-weekly-recycling-market-report-06-february-2026/",
+      "rawSourceId": "med_hellenic",
+      "retrievedAt": "2026-02-07T15:33:23.859Z",
+      "confidence": "medium",
+      "fuel_types": [
+        "other"
+      ]
+    }
+  },
+  {
+    "id": "941da53e6de723dd6d674569d22ea2e5e02187d179518a20d280d86d1745cf0b",
+    "timestamp": "2026-02-06T22:00:47.000Z",
+    "title": "Maritime Defense Weekly: Maritime Enforcement Is Accelerating",
+    "summary": "The Week in Focus U.S. maritime enforcement expanded beyond Venezuelan waters, with continued interdictions tied to oil sanctions signaling a shift from monitoring to physical enforcement at sea, regardless of distance from the original sanctions theater. European authorities ...",
+    "source": {
+      "id": "med_hellenic",
+      "name": "Hellenic Shipping News",
+      "type": "public",
+      "provider": "Hellenic Shipping News",
+      "retrievedAt": "2026-02-07T15:33:23.859Z"
+    },
+    "eventType": "regulation",
+    "fuel_types": [
+      "other"
+    ],
+    "metadata": {
+      "region": "mediterranean",
+      "url": "https://www.hellenicshippingnews.com/maritime-defense-weekly-maritime-enforcement-is-accelerating/",
+      "rawSourceId": "med_hellenic",
+      "retrievedAt": "2026-02-07T15:33:23.859Z",
+      "confidence": "medium",
+      "fuel_types": [
+        "other"
+      ]
+    }
+  },
+  {
+    "id": "27ee24234d2c76b1a50be7076d39cebd9e761ab584c69b929ee607e5a65b8c9e",
+    "timestamp": "2026-02-06T22:00:46.000Z",
+    "title": "Soybeans Rise to 2-Month High",
+    "summary": "Soybean futures in the US extended their rally to $11.15 per bushel in February, the highest in two months, on renewed interest in US soybean shipments from China. President Donald Trump stated that China would lift purchases of domestic soybeans to 20 million tonnes this year...",
+    "source": {
+      "id": "med_hellenic",
+      "name": "Hellenic Shipping News",
+      "type": "public",
+      "provider": "Hellenic Shipping News",
+      "retrievedAt": "2026-02-07T15:33:23.859Z"
+    },
+    "eventType": "other",
+    "fuel_types": [
+      "other"
+    ],
+    "metadata": {
+      "region": "mediterranean",
+      "url": "https://www.hellenicshippingnews.com/soybeans-rise-to-2-month-high/",
+      "rawSourceId": "med_hellenic",
+      "retrievedAt": "2026-02-07T15:33:23.859Z",
+      "confidence": "low",
+      "fuel_types": [
+        "other"
+      ]
+    }
+  },
+  {
+    "id": "3dde73ca2e0aadac22bbd356a6873f86c55a5d7559469afedc84a968252bf906",
+    "timestamp": "2026-02-06T22:00:45.000Z",
+    "title": "VHBS New ConTex Container Ship Time Charter Assessment Index Week 06",
+    "summary": "In Week 06, the container charter market continues to exhibit signs of stabilization   Source: Verband Hamburger und Bremer Schiffsmakler e.V",
+    "source": {
+      "id": "med_hellenic",
+      "name": "Hellenic Shipping News",
+      "type": "public",
+      "provider": "Hellenic Shipping News",
+      "retrievedAt": "2026-02-07T15:33:23.859Z"
+    },
+    "eventType": "demand",
+    "fuel_types": [
+      "other"
+    ],
+    "metadata": {
+      "region": "mediterranean",
+      "url": "https://www.hellenicshippingnews.com/vhbs-new-contex-container-ship-time-charter-assessment-index-week-06-2/",
+      "rawSourceId": "med_hellenic",
+      "retrievedAt": "2026-02-07T15:33:23.859Z",
+      "confidence": "medium",
+      "fuel_types": [
+        "other"
+      ]
+    }
+  },
+  {
+    "id": "fff25ac9b75a50f96347bd0a63363a7ec108267c21a25469eac56b4899d819d9",
+    "timestamp": "2026-02-06T22:00:44.000Z",
+    "title": "UK House Price Growth Picks Up in January",
+    "summary": "The Halifax House Price Index showed UK house prices rose 1% year-on-year in January 2026, accelerating from an upwardly revised 0.4% gain in December, marking the largest increase in three months. The average UK home surpassed £300,000 for the first time, reaching £300,077. O...",
+    "source": {
+      "id": "med_hellenic",
+      "name": "Hellenic Shipping News",
+      "type": "public",
+      "provider": "Hellenic Shipping News",
+      "retrievedAt": "2026-02-07T15:33:23.859Z"
+    },
+    "eventType": "price_proxy",
+    "fuel_types": [
+      "other"
+    ],
+    "metadata": {
+      "region": "mediterranean",
+      "url": "https://www.hellenicshippingnews.com/uk-house-price-growth-picks-up-in-january/",
+      "rawSourceId": "med_hellenic",
+      "retrievedAt": "2026-02-07T15:33:23.859Z",
+      "confidence": "medium",
+      "fuel_types": [
+        "other"
+      ]
+    }
+  },
+  {
+    "id": "7686744431b70be13a772275dbbf2cae207d235b04061ff7fce083939b12f0fc",
+    "timestamp": "2026-02-06T22:00:43.000Z",
+    "title": "Singapore’s fuel oil stocks inch up 3% coming into February",
+    "summary": "Singapore’s residual fuel oil stocks have averaged 3% higher so far in the first week of February than across January, Enterprise Singapore’s latest data shows. Changes in monthly average Singapore stocks from January to February (so far): Residual fuel oil stocks up 650,000 b...",
+    "source": {
+      "id": "med_hellenic",
+      "name": "Hellenic Shipping News",
+      "type": "public",
+      "provider": "Hellenic Shipping News",
+      "retrievedAt": "2026-02-07T15:33:23.859Z"
+    },
+    "eventType": "other",
+    "fuel_types": [
+      "other"
+    ],
+    "metadata": {
+      "region": "mediterranean",
+      "url": "https://www.hellenicshippingnews.com/singapores-fuel-oil-stocks-inch-up-3-coming-into-february/",
+      "rawSourceId": "med_hellenic",
+      "retrievedAt": "2026-02-07T15:33:23.859Z",
+      "confidence": "low",
+      "fuel_types": [
+        "other"
+      ]
+    }
+  },
+  {
+    "id": "d44b7b2aa1330afda86fced071e8e3c138edc58e00f890d70cc1335f557fdb24",
+    "timestamp": "2026-02-06T22:00:42.000Z",
+    "title": "Advanced Shipping & Trading – WEEKLY SHIPPING MARKET REPORT WEEK 06 2026",
+    "summary": "Tsakos Shipping & Trading committed the Capesize “Irene II” 180/2006 Imabari, Japan (SS/DD 04/2026) to Chinese interests at USD 21 mill.   Source: Advanced Shipping & Trading S.A.",
+    "source": {
+      "id": "med_hellenic",
+      "name": "Hellenic Shipping News",
+      "type": "public",
+      "provider": "Hellenic Shipping News",
+      "retrievedAt": "2026-02-07T15:33:23.859Z"
+    },
+    "eventType": "port_update",
+    "fuel_types": [
+      "other"
+    ],
+    "metadata": {
+      "region": "mediterranean",
+      "url": "https://www.hellenicshippingnews.com/advanced-shipping-trading-weekly-shipping-market-report-week-06-2026/",
+      "rawSourceId": "med_hellenic",
+      "retrievedAt": "2026-02-07T15:33:23.859Z",
+      "confidence": "medium",
+      "fuel_types": [
+        "other"
+      ]
+    }
+  },
+  {
+    "id": "b65a5709752141a875f271d3119b59cf671f6c937ac03c7cf0ee76419bbbb380",
+    "timestamp": "2026-02-06T22:00:41.000Z",
+    "title": "Storm Leo brings chaos to Spain and Portugal; shipping delays across Europe",
+    "summary": "Storm Leo has brought high winds and torrential rain across large parts of Spain and Portugal, forcing ports and shipping companies to suspend operations. The severe weather system hit the region on Tuesday 3 February and is expected to persist until Saturday 7 February, with ...",
+    "source": {
+      "id": "med_hellenic",
+      "name": "Hellenic Shipping News",
+      "type": "public",
+      "provider": "Hellenic Shipping News",
+      "retrievedAt": "2026-02-07T15:33:23.859Z"
+    },
+    "eventType": "regulation",
+    "fuel_types": [
+      "other"
+    ],
+    "metadata": {
+      "region": "mediterranean",
+      "url": "https://www.hellenicshippingnews.com/storm-leo-brings-chaos-to-spain-and-portugal-shipping-delays-across-europe/",
+      "rawSourceId": "med_hellenic",
+      "retrievedAt": "2026-02-07T15:33:23.859Z",
+      "confidence": "medium",
+      "fuel_types": [
+        "other"
+      ]
+    }
+  },
+  {
+    "id": "bfcd6ac62a2f306ecf4a87ffeb5db75fa512532667c6eeec38c617e3b6370c57",
+    "timestamp": "2026-02-07T14:27:42.000Z",
+    "title": "Largest ever ship docked in Libya’s Sirte port",
+    "summary": "Sirte, Libya (Ports Europe) February 7, 2026 – Chinese bitumen tanker Jin Zhou Wan docked at the Libya’s Mediterranean Sea Sirte Free Zone Port on February 6. It was operational first for the port. The vessel is the largest in size and length (145.9 meters long, 8 m draft) to ...",
+    "source": {
+      "id": "med_piraeus",
+      "name": "Piraeus Port News",
+      "type": "public",
+      "provider": "Piraeus Port News",
+      "retrievedAt": "2026-02-07T15:33:24.034Z"
+    },
+    "eventType": "regulation",
+    "fuel_types": [
+      "other"
+    ],
+    "metadata": {
+      "region": "mediterranean",
+      "url": "https://www.portseurope.com/largest-ever-ship-docked-in-libyas-sirte-port/",
+      "rawSourceId": "med_piraeus",
+      "retrievedAt": "2026-02-07T15:33:24.034Z",
+      "confidence": "medium",
+      "fuel_types": [
+        "other"
+      ]
+    }
+  },
+  {
+    "id": "6d9e47e9f7517fb455a63498604efb04b8e61daed5955740a9f03c815a5c15ae",
+    "timestamp": "2026-02-07T14:12:54.000Z",
+    "title": "240 kg of cocaine for Portugal seized in Brazil’s Santos port",
+    "summary": "Santos, Brazil (Ports Europe) February 7, 2026 – Some 240 kg of cocaine, concealed in a shipment of 20 tonnes of soybean oil, were seized by customs authorities in Brazilian port of Santos on the western coast of Sao Paulo state, local media reported on February 6. The drug wa...",
+    "source": {
+      "id": "med_piraeus",
+      "name": "Piraeus Port News",
+      "type": "public",
+      "provider": "Piraeus Port News",
+      "retrievedAt": "2026-02-07T15:33:24.034Z"
+    },
+    "eventType": "regulation",
+    "fuel_types": [
+      "other"
+    ],
+    "metadata": {
+      "region": "mediterranean",
+      "url": "https://www.portseurope.com/240-kg-of-cocaine-for-portugal-seized-in-brazils-santos-port/",
+      "rawSourceId": "med_piraeus",
+      "retrievedAt": "2026-02-07T15:33:24.034Z",
+      "confidence": "medium",
+      "fuel_types": [
+        "other"
+      ]
+    }
+  },
+  {
+    "id": "2611924acf93c0c675f0f4c69a85ee2166f16462aeff96357d00c1510420c88f",
+    "timestamp": "2026-02-07T10:48:10.000Z",
+    "title": "Russia plans container service St. Petersburg-Brazil",
+    "summary": "St. Petersburg, Russia (Ports Europe) February 7, 2026 – Russia is planning a direct container service from St. Petersburg to Brazil, the country’s Transport Minister Andrei Nikitin said during a Russian-Brazilian Business Forum. According to Nikitin, maritime transport and po...",
+    "source": {
+      "id": "med_piraeus",
+      "name": "Piraeus Port News",
+      "type": "public",
+      "provider": "Piraeus Port News",
+      "retrievedAt": "2026-02-07T15:33:24.034Z"
+    },
+    "eventType": "regulation",
+    "fuel_types": [
+      "other"
+    ],
+    "metadata": {
+      "region": "mediterranean",
+      "url": "https://www.portseurope.com/russia-plans-container-service-st-petersburg-brazil/",
+      "rawSourceId": "med_piraeus",
+      "retrievedAt": "2026-02-07T15:33:24.034Z",
+      "confidence": "medium",
+      "fuel_types": [
+        "other"
+      ]
+    }
+  },
+  {
+    "id": "97bd8623e98923c381e3a9ed328f7acd56512c34a36eb28e3ea6620446730c91",
+    "timestamp": "2026-02-06T23:11:00.000Z",
+    "title": "58 kg of cocaine smuggled via Hamburg port seized in Germany",
+    "summary": "Kiel, Germany (Ports Europe) February 7, 2026 – Some 58 kg of cocaine were discovered in a truck transporting insulation wool by plainclothes officers from Germany’s Joint Highway Patrol Unit (GFA) near Bredstedt on January 5, officials said on February 5. The drug entered Ger...",
+    "source": {
+      "id": "med_piraeus",
+      "name": "Piraeus Port News",
+      "type": "public",
+      "provider": "Piraeus Port News",
+      "retrievedAt": "2026-02-07T15:33:24.034Z"
+    },
+    "eventType": "regulation",
+    "fuel_types": [
+      "other"
+    ],
+    "metadata": {
+      "region": "mediterranean",
+      "url": "https://www.portseurope.com/58-kg-of-cocaine-smuggled-via-hamburg-port-seized-in-germany/",
+      "rawSourceId": "med_piraeus",
+      "retrievedAt": "2026-02-07T15:33:24.034Z",
+      "confidence": "medium",
+      "fuel_types": [
+        "other"
+      ]
+    }
+  },
+  {
+    "id": "f8360f8bf3797af19c91901f7a2e1b8bae48fb25fc9dcd466de20841a6bba701",
+    "timestamp": "2026-02-06T23:10:00.000Z",
+    "title": "Netherlands: Maritime and offshore industry are of “national strategic importance”",
+    "summary": "Amsterdam, Netherlands (Ports Europe) February 7, 2026 – A new Dutch coalition government agreement frames the maritime and offshore industry (maritime manufacturing) as a sector of “national strategic importance”, stressing its role in energy security, defence and water safet...",
+    "source": {
+      "id": "med_piraeus",
+      "name": "Piraeus Port News",
+      "type": "public",
+      "provider": "Piraeus Port News",
+      "retrievedAt": "2026-02-07T15:33:24.034Z"
+    },
+    "eventType": "regulation",
+    "fuel_types": [
+      "other"
+    ],
+    "metadata": {
+      "region": "mediterranean",
+      "url": "https://www.portseurope.com/netherlands-maritime-and-offshore-industry-are-of-national-strategic-importance/",
+      "rawSourceId": "med_piraeus",
+      "retrievedAt": "2026-02-07T15:33:24.034Z",
+      "confidence": "medium",
+      "fuel_types": [
+        "other"
+      ]
+    }
+  },
+  {
+    "id": "2a18f12e256e6941af49bea947b33717a29bec21e1dfef4f56efeb2dc3e9cc7b",
+    "timestamp": "2026-02-06T15:26:42.000Z",
+    "title": "1,300 kg of cocaine seized in Portugal’s port city of Portimão",
+    "summary": "Portimão, Portugal (Ports Europe) February 6, 2026 – Some 1,300 kg of cocaine were seized in Portugal’s port city of Portimão, country’s Judiciary Police (PJ) said on February 5. The operation, code named “Valhalla”, involved Copenhagen Police, South and Southern Jutland Polic...",
+    "source": {
+      "id": "med_piraeus",
+      "name": "Piraeus Port News",
+      "type": "public",
+      "provider": "Piraeus Port News",
+      "retrievedAt": "2026-02-07T15:33:24.034Z"
+    },
+    "eventType": "regulation",
+    "fuel_types": [
+      "other"
+    ],
+    "metadata": {
+      "region": "mediterranean",
+      "url": "https://www.portseurope.com/1300-kg-of-cocaine-seized-in-portugals-port-city-of-portimao/",
+      "rawSourceId": "med_piraeus",
+      "retrievedAt": "2026-02-07T15:33:24.034Z",
+      "confidence": "medium",
+      "fuel_types": [
+        "other"
+      ]
+    }
+  },
+  {
+    "id": "302dc5ac065fd5bbdb350142e43d8cca525a55b14cf5366591e45f4bfe06d8c9",
+    "timestamp": "2026-02-06T12:53:27.000Z",
+    "title": "24-hour dockers strike paralised Greek Piraeus port",
+    "summary": "Piraeus, Greece (Ports Europe) February 6, 2026 – Dock workers paralised Greek Aegean Sea port of Piraeus by a 24-hour strike that started in the morning of February 6. Workers are demanding the renewal of collective labour agreements with wage increases, improved health and s...",
+    "source": {
+      "id": "med_piraeus",
+      "name": "Piraeus Port News",
+      "type": "public",
+      "provider": "Piraeus Port News",
+      "retrievedAt": "2026-02-07T15:33:24.034Z"
+    },
+    "eventType": "demand",
+    "fuel_types": [
+      "other"
+    ],
+    "metadata": {
+      "region": "mediterranean",
+      "url": "https://www.portseurope.com/24-hour-dockers-strike-paralised-greek-piraeus-port/",
+      "rawSourceId": "med_piraeus",
+      "retrievedAt": "2026-02-07T15:33:24.034Z",
+      "confidence": "medium",
+      "fuel_types": [
+        "other"
+      ]
+    }
+  },
+  {
+    "id": "cf1807eea1470f5095d5615c9cf6a0bb2af16924fbbc90fb335780f858f5e472",
+    "timestamp": "2026-02-06T12:48:01.000Z",
+    "title": "ONEX Shipyards joins Greek ports association ELIME",
+    "summary": "Athens, Greece (Ports Europe) February 6, 2026 – ONEX Shipyards & Technologies has formally joined the Hellenic Ports Association (ELIME) and secured a seat on its board of directors, following a decision taken at an extraordinary general meeting. The move strengthens ONEX’s s...",
+    "source": {
+      "id": "med_piraeus",
+      "name": "Piraeus Port News",
+      "type": "public",
+      "provider": "Piraeus Port News",
+      "retrievedAt": "2026-02-07T15:33:24.034Z"
+    },
+    "eventType": "regulation",
+    "fuel_types": [
+      "other"
+    ],
+    "metadata": {
+      "region": "mediterranean",
+      "url": "https://www.portseurope.com/onex-shipyards-joins-greek-ports-association-elime/",
+      "rawSourceId": "med_piraeus",
+      "retrievedAt": "2026-02-07T15:33:24.034Z",
+      "confidence": "medium",
+      "fuel_types": [
+        "other"
+      ]
+    }
+  },
+  {
+    "id": "aa35e249a99967abac573652db68c23289ebf3e230fa72253c8184ee51a9f745",
+    "timestamp": "2026-02-06T12:23:51.000Z",
+    "title": "Bad weather closed ports of Algeciras and Gibraltar until Feb. 11 or 12",
+    "summary": "Algeciras, Spain (Ports Europe) February 6, 2026 – The ports of Algeciras (Spain) and Gibraltar will remain closed to maritime traffic until February 11 or 12, and all trucks are banned from entering them due to ongoing severe weather (storm Leonardo) in southern Spain, accord...",
+    "source": {
+      "id": "med_piraeus",
+      "name": "Piraeus Port News",
+      "type": "public",
+      "provider": "Piraeus Port News",
+      "retrievedAt": "2026-02-07T15:33:24.034Z"
+    },
+    "eventType": "regulation",
+    "fuel_types": [
+      "other"
+    ],
+    "metadata": {
+      "region": "mediterranean",
+      "url": "https://www.portseurope.com/bad-weather-closed-ports-of-algeciras-and-gibraltar-until-feb-11-or-12/",
+      "rawSourceId": "med_piraeus",
+      "retrievedAt": "2026-02-07T15:33:24.034Z",
+      "confidence": "medium",
+      "fuel_types": [
+        "other"
+      ]
+    }
+  },
+  {
+    "id": "50ad92c26a7565ef6b0c532c1cecb3e5e2d118582b3d33ec91c7a955e375b60b",
+    "timestamp": "2026-02-06T12:20:05.000Z",
+    "title": "Ports of Stockholm reports stable freight and rising passenger traffic in 2025",
+    "summary": "Stockholm, Sweden (Ports Europe) February 6, 2026 – Ports of Stockholm reported a positive performance in 2025, with freight volumes remaining stable and passenger numbers on ferries and cruise ships continuing to rise. As one of the world’s largest passenger ports and one of ...",
+    "source": {
+      "id": "med_piraeus",
+      "name": "Piraeus Port News",
+      "type": "public",
+      "provider": "Piraeus Port News",
+      "retrievedAt": "2026-02-07T15:33:24.034Z"
+    },
+    "eventType": "regulation",
+    "fuel_types": [
+      "other"
+    ],
+    "metadata": {
+      "region": "mediterranean",
+      "url": "https://www.portseurope.com/ports-of-stockholm-reports-stable-freight-and-rising-passenger-traffic-in-2025/",
+      "rawSourceId": "med_piraeus",
+      "retrievedAt": "2026-02-07T15:33:24.035Z",
+      "confidence": "medium",
+      "fuel_types": [
+        "other"
+      ]
+    }
+  }
+]

@@ -1,0 +1,235 @@
+/**
+ * ui/theme/tokens.css
+ * Single source of truth for Aequor design tokens.
+ * Phase 11: extended with surface depth, accent system, glow system, card lighting.
+ * Import this file once in app/main.tsx.
+ */
+:root {
+    /* ── Spacing scale ─────────────────────────────────────────── */
+    --sp-1: 4px;
+    --sp-2: 8px;
+    --sp-3: 12px;
+    --sp-4: 16px;
+    --sp-5: 20px;
+    --sp-6: 24px;
+
+    /* ── Control heights ───────────────────────────────────────── */
+    --rail-h: 52px;
+    /* CommandRail fixed height */
+    --chip-h: 24px;
+    /* Chip/toggle button in rail */
+    --input-h: 28px;
+    /* Text inputs inside panels */
+    --rail-input-h: 30px;
+    /* Inputs/selects on the rail */
+    --row-h: 32px;
+    /* Screener table row height */
+    --btn-h: 28px;
+    /* Standard action button */
+
+    /* ── Radius ────────────────────────────────────────────────── */
+    --radius-sm: 3px;
+    --radius-md: 5px;
+    --radius-lg: 7px;
+    --radius-pill: 12px;
+
+    /* ── Surface depth system ──────────────────────────────────── */
+    --surface-0: #080b14;
+    /* App background */
+    --surface-1: #0d1120;
+    /* Panels */
+    --surface-1-raised: #101526;
+    /* Hover-elevated */
+    --surface-2: #151b2e;
+    /* Elevated: popovers, drawers */
+    --surface-3: #192038;
+    /* Active / selected surface */
+
+    /* Legacy surface aliases (kept for compatibility) */
+    --surface-rail: rgba(8, 11, 20, 0.97);
+    --surface-hover: rgba(255, 255, 255, 0.035);
+    --surface-active: rgba(59, 130, 246, 0.09);
+
+    /* ── Borders ───────────────────────────────────────────────── */
+    --border-subtle: rgba(255, 255, 255, 0.065);
+    --border-mid: rgba(255, 255, 255, 0.11);
+    --border-strong: rgba(255, 255, 255, 0.20);
+    --border-panel: rgba(255, 255, 255, 0.055);
+    --border-card: rgba(255, 255, 255, 0.07);
+    --border-active: rgba(59, 130, 246, 0.30);
+    --border-focus: rgba(59, 130, 246, 0.50);
+    --divider-rail: rgba(255, 255, 255, 0.08);
+
+    /* ── Text dims ─────────────────────────────────────────────── */
+    --text-dim-1: rgba(255, 255, 255, 0.55);
+    --text-dim-2: rgba(255, 255, 255, 0.35);
+    --text-dim-3: rgba(255, 255, 255, 0.20);
+    --text-dim-4: rgba(255, 255, 255, 0.10);
+
+    /* ── Accent color system ───────────────────────────────────── */
+    --accent-primary: #3b82f6;
+    /* Alias for compat */
+    --accent-secondary: #60a5fa;
+    --accent-blue: #3b82f6;
+    --accent-blue-dim: rgba(59, 130, 246, 0.10);
+    --accent-blue-glow: rgba(59, 130, 246, 0.14);
+    --accent-violet: #8b5cf6;
+    --accent-violet-dim: rgba(139, 92, 246, 0.10);
+    --accent-amber: #f59e0b;
+    --accent-amber-dim: rgba(245, 158, 11, 0.10);
+    --accent-emerald: #10b981;
+    --accent-emerald-dim: rgba(16, 185, 129, 0.10);
+    --accent-rose: #f43f5e;
+    --accent-rose-dim: rgba(244, 63, 94, 0.10);
+
+    /* ── Glow system (institutional — not neon) ────────────────── */
+    --glow-blue-sm: 0 0 0 1px rgba(59, 130, 246, 0.22), 0 0 10px rgba(59, 130, 246, 0.10);
+    --glow-blue-md: 0 0 0 1px rgba(59, 130, 246, 0.28), 0 0 16px rgba(59, 130, 246, 0.14);
+    --glow-violet-sm: 0 0 0 1px rgba(139, 92, 246, 0.20), 0 0 10px rgba(139, 92, 246, 0.09);
+    --glow-emerald-sm: 0 0 0 1px rgba(16, 185, 129, 0.20), 0 0 10px rgba(16, 185, 129, 0.09);
+    --glow-amber-sm: 0 0 0 1px rgba(245, 158, 11, 0.22), 0 0 10px rgba(245, 158, 11, 0.09);
+    --glow-rose-sm: 0 0 0 1px rgba(244, 63, 94, 0.22), 0 0 10px rgba(244, 63, 94, 0.09);
+
+    /* ── Card lighting ─────────────────────────────────────────── */
+    /* Top-edge highlight via inset box-shadow */
+    --card-inset-top: inset 0 1px 0 rgba(255, 255, 255, 0.07);
+    /* Subtle top-to-bottom gradient overlay */
+    --card-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.025) 0%, transparent 60%);
+
+    /* ── Backdrop blur ─────────────────────────────────────────── */
+    --blur-popover: blur(6px);
+    --blur-light: blur(2px);
+
+    /* ── Refined shadows ───────────────────────────────────────── */
+    --shadow-card: 0 1px 3px rgba(0, 0, 0, 0.40), 0 4px 12px rgba(0, 0, 0, 0.25);
+    --shadow-panel: 0 2px 8px rgba(0, 0, 0, 0.35);
+    --shadow-popover: 0 8px 32px rgba(0, 0, 0, 0.60), 0 2px 8px rgba(0, 0, 0, 0.35);
+    --shadow-rail: 0 1px 0 rgba(0, 0, 0, 0.50), 0 2px 12px rgba(0, 0, 0, 0.20);
+
+    /* ── Typography ────────────────────────────────────────────── */
+    --font-label: 11px;
+    --font-body: 12px;
+    --font-body-md: 13px;
+    --font-table: 13px;
+    --font-ui: 12px;
+    --lsp-caps: 0.08em;
+    --lsp-wide: 0.11em;
+    --line-height-body: 1.45;
+}
+
+/* ── Terminal table utility class ─────────────────────────────────── */
+.terminal-table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+    font-size: var(--font-body);
+    font-variant-numeric: tabular-nums;
+}
+
+.terminal-table th {
+    padding: 5px 10px;
+    font-size: var(--font-label);
+    font-weight: 700;
+    letter-spacing: var(--lsp-caps);
+    color: var(--text-dim-2);
+    text-align: left;
+    white-space: nowrap;
+    position: sticky;
+    top: 0;
+    background-color: var(--surface-0);
+    z-index: 10;
+    /* shadow instead of border-bottom — no double border */
+    box-shadow: 0 1px 0 var(--border-subtle);
+}
+
+.terminal-table th.right,
+.terminal-table td.right {
+    text-align: right;
+}
+
+.terminal-table th.center,
+.terminal-table td.center {
+    text-align: center;
+}
+
+.terminal-table td {
+    padding: 4px 10px;
+    font-size: var(--font-table);
+    border-bottom: 1px solid var(--border-subtle);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: var(--row-h);
+    color: var(--text-primary);
+    line-height: var(--line-height-body);
+}
+
+.terminal-table tr:hover td {
+    background-color: var(--surface-hover);
+}
+
+.terminal-table tr.selected td {
+    background-color: var(--surface-active);
+    border-left-color: var(--accent-blue);
+}
+
+/* ── Panel section title utility ──────────────────────────────────── */
+.section-title {
+    font-size: var(--font-label);
+    font-weight: 700;
+    letter-spacing: var(--lsp-caps);
+    color: var(--text-dim-2);
+    padding: 6px var(--sp-4);
+    border-bottom: 1px solid var(--border-subtle);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.022) 0%, transparent 100%);
+    display: flex;
+    align-items: center;
+    gap: var(--sp-2);
+    text-transform: uppercase;
+}
+
+/* ── Chip utility class ───────────────────────────────────────────── */
+.chip {
+    display: inline-flex;
+    align-items: center;
+    height: var(--chip-h);
+    padding: 0 var(--sp-2);
+    font-size: var(--font-body);
+    font-weight: 600;
+    font-family: inherit;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--border-mid);
+    background: transparent;
+    color: var(--text-dim-1);
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background 0.10s, border-color 0.10s, color 0.10s, box-shadow 0.12s;
+    line-height: 1;
+}
+
+.chip:hover {
+    border-color: rgba(255, 255, 255, 0.18);
+    background: var(--surface-hover);
+    color: var(--text-primary);
+}
+
+.chip.active {
+    border-color: var(--border-active);
+    background: var(--accent-blue-dim);
+    color: var(--accent-blue);
+    box-shadow: var(--glow-blue-sm);
+}
+
+/* ── Panel card utility ───────────────────────────────────────────── */
+.panel-card {
+    background-color: var(--surface-1);
+    background-image: var(--card-gradient);
+    border: 1px solid var(--border-panel);
+    border-radius: var(--radius-md);
+    box-shadow: var(--card-inset-top), var(--shadow-card);
+}
+
+/* ── Nav link hover ───────────────────────────────────────────────── */
+.nav-link:hover {
+    background-color: var(--surface-hover) !important;
+}

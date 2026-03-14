@@ -1,5 +1,5 @@
 import { DummyAdapter } from '../adapters/dummy/DummyAdapter';
-import { Visibility } from '../domain/constants';
+import type { Visibility } from '../domain/constants';
 
 async function verify() {
     console.log('Starting verification of DummyAdapter...');
@@ -7,7 +7,7 @@ async function verify() {
 
     try {
         // 1. Validate listEvents
-        const events = await adapter.listEvents({ limit: 10, visibility: Visibility.Public });
+        const events = await adapter.listEvents({ limit: 10, visibility: 'public' });
         if (events.length === 0) throw new Error('No events returned');
         console.log(`listEvents returned ${events.length} events.`);
 

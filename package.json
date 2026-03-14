@@ -10,12 +10,15 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "refresh:public": "tsx scripts/refresh_public_once.ts",
+    "verify:public": "tsx scripts/verify_public_ingestion.ts"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/google.maps": "^3.58.1",
     "@types/node": "^25.0.10",
     "@types/react": "^19.2.9",
     "@types/react-dom": "^19.2.3",
@@ -25,9 +28,14 @@
     "vite": "^7.3.1"
   },
   "dependencies": {
+    "@googlemaps/js-api-loader": "^2.0.2",
     "buffer": "^6.0.3",
+    "dotenv": "^17.2.4",
+    "lightweight-charts": "^5.1.0",
+    "maplibre-gl": "^5.19.0",
     "react": "^19.2.3",
     "react-dom": "^19.2.3",
-    "react-router-dom": "^7.13.0"
+    "react-router-dom": "^7.13.0",
+    "rss-parser": "^3.13.0"
   }
 }
